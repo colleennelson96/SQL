@@ -1,0 +1,14 @@
+/** Hockey store - specializing in Sticks ($151.95), Pucks ($1.99), Jerseys ($40.00), Gloves ($64.99), Skates ($109.99), Helmets ($54.99) **/
+
+CREATE TABLE hockey_gear (id INTEGER PRIMARY KEY, name TEXT, price NUMERIC, amount_sold NUMERIC);
+
+INSERT INTO hockey_gear VALUES (1, 'sticks', '151.99', 4);
+INSERT INTO hockey_gear VALUES (2, 'pucks', '1.99', 5);
+INSERT INTO hockey_gear VALUES (3, 'jerseys', '40.95', 2);
+INSERT INTO hockey_gear VALUES (4, 'gloves', '64.99', 3);
+INSERT INTO hockey_gear VALUES (5, 'helmets', '54.99', 1);
+SELECT * FROM hockey_gear;
+
+SELECT * FROM hockey_gear ORDER BY price;
+
+SELECT * FROM hockey_gear WHERE price > 50.00
