@@ -80,4 +80,10 @@ SELECT surface_gravity AS surface_gravity_Earth FROM solar_system_objects WHERE 
 SELECT body, surface_gravity FROM solar_system_objects WHERE surface_gravity > (SELECT surface_gravity FROM solar_system_objects WHERE body = 'Earth');
 
 /*return planets that have a density greater than 1*/
-SELECT body, density FROM solar_system_objects GROUP BY density HAVING density > 1 ORDER BY density
+SELECT body, density FROM solar_system_objects GROUP BY density HAVING density > 1 ORDER BY density;
+
+/*return total mass of all planets*/
+SELECT SUM(mass) FROM solar_system_objects;
+
+/*return the largest and the smallest radius*/
+SELECT body, MIN(mean_radius) FROM solar_system_objects; SELECT body, MAX(mean_radius) FROM solar_system_objects;
